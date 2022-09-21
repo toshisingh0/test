@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @task %>
+
+<div>
+  <%= link_to "Edit this task", edit_project_task_path(@project, task) %> |
+  <%= link_to "Back to tasks", tasks_path %>
+
+  <%= button_to "Destroy this task", @task, method: :delete %>
+  <%= link_to 'Destroy task', [@project, task], method: :delete, data: { confirm: 'Are you sure?' } %>
+
+</div>

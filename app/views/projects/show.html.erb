@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @project %>
+<h2>Project</h2>
+<% for project in @project.tasks %>
+    <ul>
+      <li><%= project.name %></li>
+  </ul>
+<% end %>
+
+<div>
+  <%= link_to "Edit this project", edit_project_path(@project) %> |
+  <%= link_to "Back to projects", projects_path %>
+  <%= link_to "New project", new_project_path %>
+  <%= link_to "Add Task", new_project_task_url(@project) %>
+
+  <%= button_to "Destroy this project", @project, method: :delete %>
+</div>
+
+

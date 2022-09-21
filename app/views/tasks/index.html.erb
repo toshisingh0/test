@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tasks</h1>
+
+<div id="tasks">
+  <% @tasks.each do |task| %>
+    <tr><h3>Project name</h3><td><%= render task.project %></td></tr>
+    <tr><h3>Task name</h3><td><%= render task %></td></tr>
+    
+     
+    <p>
+    </p>
+  <% end %>
+</div>
+<%= paginate @tasks %>
+<%= page_entries_info @tasks %>
+
+
+<%= link_to "New task", new_project_task_path(@project) %>
+<%#= link_to 'Add task', project_tasks_path(@project) %> |
+
+
